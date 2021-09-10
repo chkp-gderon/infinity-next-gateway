@@ -66,6 +66,6 @@ This repository provides Terraform templates to deploy the CloudGuard Infinity N
 
 3. Apply the template
 
-    cd azure/vmss-existing-vnet
-    terraform init
-    terraform apply
+        cd azure/vmss-existing-vnet
+        terraform init
+        terraform apply
