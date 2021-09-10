@@ -3,7 +3,9 @@
 ## Overview
 This repository holds Terraform templates to deploy the CloudGuard Infinity Next VMSS in Azure.
 
-<img src="https://sc1.checkpoint.com/documents/Infinity_Portal/WebAdminGuides/EN/Infinity-Next-Admin-Guide/Resources/Images/Images-for-Infinity-Next/Azure_VMSS_1.png" width="200" >
+<p align="center">
+<img src="https://sc1.checkpoint.com/documents/Infinity_Portal/WebAdminGuides/EN/Infinity-Next-Admin-Guide/Resources/Images/Images-for-Infinity-Next/Azure_VMSS_1.png" width="400" >
+</p>
 
 ## Prerequisites
 
