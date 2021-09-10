@@ -1,7 +1,7 @@
 # CloudGuard Infinity Next Gateway Terraform Template
 
 ## Overview
-This repository provides Terraform templates to deploy the CloudGuard Infinity Next VMSS in Azure.
+This repository provides Terraform templates to deploy the CloudGuard Infinity Next Gateway VMSS in Azure.
 
 <p align="center">
 <img src="https://sc1.checkpoint.com/documents/Infinity_Portal/WebAdminGuides/EN/Infinity-Next-Admin-Guide/Resources/Images/Images-for-Infinity-Next/Azure_VMSS_1.png" width="400" >
@@ -12,6 +12,11 @@ This repository provides Terraform templates to deploy the CloudGuard Infinity N
 - [Terraform](https://www.terraform.io/downloads.html) - Version 1.0.3 or later
 - [Terraform for Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/terraform-install-configure)
 - [Check Point Infinity Portal Account](https://sc1.checkpoint.com/documents/Infinity_Portal/WebAdminGuides/EN/Infinity-Next-Admin-Guide/Topics-Infinity-Next/Getting-Started.htm?tocpath=Getting%20Started%7C_____0#Getting_Started)
+
+## Known Limitations
+
+- VNETs and Subnets need to be pre-configured
+- Azure Keyvault for HTTPS configuration is not yet included
 
 ## Usage
 
@@ -61,5 +66,6 @@ This repository provides Terraform templates to deploy the CloudGuard Infinity N
 
 3. Apply the template
 
+        cd azure/vmss-existing-vnet
         terraform init
         terraform apply
