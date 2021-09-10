@@ -14,9 +14,8 @@ This repository deploys the CloudGuard Infinity Next Gateway for Azure with Terr
 
 2. Configure the Terraform variables in the terraform.tfvars file
 
-Example
+### Example
 
-> ```
 client_secret                   = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 client_id                       = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 tenant_id                       = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -53,7 +52,7 @@ backend_load_distribution       = "Default"
 enable_custom_metrics           = "false"
 waapAgentToken                  = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 waapAgentFog                    = ""
->```
+
 
 3. Apply the template
 
