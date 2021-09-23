@@ -34,4 +34,4 @@ frontend_load_distribution      = "PLEASE ENTER EXTERNAL LOAD BALANCER SESSION P
 backend_load_distribution       = "PLEASE ENTER INTERNAL LOAD BALANCER SESSION PERSISTANCE"        # "Default"
 enable_custom_metrics           = "PLEASE ENTER true or false"                                     # true
 waapAgentToken                  = "PLEASE ENTER WAAP AGENT TOKEN"                                  # "xxxxxxxxxxxx"
-waapAgentFog                    = "PLEASE ENTER FOG IP ADDRESS (OPTIONAL)                          # ""
+waapAgentFog                    = "PLEASE ENTER FOG IP ADDRESS (OPTIONAL)"                         # ""
