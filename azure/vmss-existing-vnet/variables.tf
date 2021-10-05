@@ -52,9 +52,7 @@ locals { // locals for 'availability_zones_num' allowed values
 variable "sic_key" {
   description = "Secure Internal Communication(SIC) key"
   type = string
-}
-resource "null_resource" "sic_key_invalid" {
-  count = length(var.sic_key) >= 12 ? 0 : "SIC key must be at least 12 characters long"
+  default = ""
 }
 
 variable "waapAgentToken" {
@@ -114,6 +112,7 @@ variable "disk_size" {
 variable "os_version" {
   description = "GAIA OS version"
   type = string
+  default = "R80.40"
 }
 
 variable "vm_os_sku" {
@@ -144,16 +143,6 @@ variable "is_blink" {
   default = true
 }
 
-variable "management_name" {
-  description = "The name of the management server as it appears in the configuration file"
-  type = string
-}
-
-variable "management_IP" {
-  description = "The IP address used to manage the VMSS instances"
-  type = string
-}
-
 variable "management_interface" {
   description = "Manage the Gateways in the Scale Set via the instance's external (eth0) or internal (eth1) NIC's private IP address"
   type = string
@@ -167,11 +156,6 @@ locals { // locals for 'management_interface' allowed values
   ]
   // will fail if [var.management_interface] is invalid:
   validate_management_interface_value = index(local.management_interface_allowed_values, var.management_interface)
-}
-
-variable "configuration_template_name" {
-  description = "The configuration template name as it appears in the configuration file"
-  type = string
 }
 
 //********************** Networking Variables **************************//
@@ -279,9 +263,6 @@ variable "vm_os_offer" {
 
 locals { // locals for 'vm_os_offer' allowed values
   vm_os_offer_allowed_values = [
-    "check-point-cg-r8030",
-    "check-point-cg-r8040",
-    "check-point-cg-r81",
     "infinity-gw"
   ]
   // will fail if [var.vm_os_offer] is invalid:
